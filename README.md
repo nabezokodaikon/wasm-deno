@@ -1,5 +1,16 @@
 # How to make wasm
 
+### wasm-pack
+```bash
+$ wasm-pack build --out-dir ./server/public/pkg --target web
+```
+
+### bundle
+```bash
+$ deno bundle server/public/ts/greet.ts server/public/js/greet.js
+```
+
+### MEMO
 1. `deno bundle server/public/ts/greet.ts server/public/js/greet.js`
 1. `cargo new --lib wasm-deno`
 1. `wasm-pack build`
