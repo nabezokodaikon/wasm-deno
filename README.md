@@ -10,6 +10,12 @@ $ wasm-pack build --out-dir ./server/public/pkg --target web
 $ deno bundle server/public/ts/greet.ts server/public/js/greet.js
 ```
 
+### wasm-bindgen
+```bash
+$ cargo build --target wasm32-unknown-unknown --release
+$ wasm-bindgen target/wasm32-unknown-unknown/release/wasm_deno.wasm --out-dir ./server/public/pkg --target deno
+```
+
 ### MEMO
 1. `deno bundle server/public/ts/greet.ts server/public/js/greet.js`
 1. `cargo new --lib wasm-deno`
