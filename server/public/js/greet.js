@@ -110,5 +110,8 @@ async function init(input) {
     init.__wbindgen_wasm_module = module;
     return wasm;
 }
-await init(Deno.readFile('../pkg/wasm_deno_bg.wasm'));
-greet('Hello');
+async function run() {
+    await init(await fetch('../public/pkg/wasm_deno_bg.wasm'));
+    greet('hello');
+}
+run();
