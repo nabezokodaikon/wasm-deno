@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "declarationMap": true,
+    "inlineSources": true,
+    "inlineSourceMap": true,
+    "outDir": "./server/public/js",
+    "sourceMap": true
+  }
+}
